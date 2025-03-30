@@ -3,26 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Página Web</title>
+    <title>Mi Portafolio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="favicon.ico">
     <meta name="theme-color" content="#007bff">
     <link rel="manifest" href="manifest.json">
 </head>
 <body>
+    <!-- Pantalla de Carga -->
+    <div id="splash-screen">
+        <div class="loader"></div>
+    </div>
 
     <header>
-        <h1>ATLETA STUDIO</h1>
+        <img src="/logo.png" alt="ATLETA STUDIO Logo" class="logo" style="width: 100px; height: auto;">
     </header>
 
     <main>
-        <section>
-            <p>MI PAGINA.</p>
-            <img src="multimedia/imagen.jpg" alt="Ejemplo de imagen">
-            <video controls>
-                <source src="multimedia/video.mp4" type="video/mp4">
-                Tu navegador no soporta video.
+        <section class="banner">
+            <video autoplay muted loop>
+                <source src="/1215.mp4" type="video/mp4">
+                Tu navegador no soporta el elemento de video.
             </video>
+            <div class="banner-overlay">
+                <p>Logo Designer | Brand Designer | Web Designer</p>
+                <h1>Diseñando Identidades de Marca Con Pasión Y Creatividad</h1>
+                <a href="/trabajemosjuntos" class="btn">Trabajemos Juntos</a>
+            </div>
+        </section>
+
+        <section class="proyectos">
+            <div class="grid-container" id="projects-container"></div>
+        </section>
+
+        <section class="sobre-mi">
+            <div class="container">
+                <img src="/images/foto.jpg" alt="Adolfo Dominguez">
+                <div>
+                    <h2>SOY ADODMZ, UN GUSTO CONOCERTE</h2>
+                    <p>Hola, mi nombre es <strong>Adolfo Domínguez</strong> y soy diseñador gráfico, diseñador de logotipos y diseñador web de Ciudad Juárez, México.</p>
+                    <a href="/trabajemosjuntos" class="btn">Trabajemos Juntos</a>
+                </div>
+            </div>
         </section>
     </main>
 
@@ -33,7 +55,12 @@
             .then(() => console.log("Service Worker registrado"))
             .catch(err => console.log("Error al registrar el Service Worker", err));
         }
+        
+        window.onload = function() {
+            setTimeout(function() {
+                document.getElementById("splash-screen").style.display = "none";
+            }, 3000); // Ocultar splash screen después de 3 segundos
+        };
     </script>
-
 </body>
 </html>
