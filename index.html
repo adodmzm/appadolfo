@@ -16,19 +16,19 @@
     </div>
 
     <header>
-        <img src="/logo.png" alt="ATLETA STUDIO Logo" class="logo" style="width: 100px; height: auto;">
+        <img src="./logo.png" alt="ATLETA STUDIO Logo" class="logo" style="width: 100px; height: auto;">
     </header>
 
     <main>
         <section class="banner">
             <video autoplay muted loop>
-                <source src="/1215.mp4" type="video/mp4">
+                <source src="./1215.mp4" type="video/mp4">
                 Tu navegador no soporta el elemento de video.
             </video>
             <div class="banner-overlay">
                 <p>Logo Designer | Brand Designer | Web Designer</p>
                 <h1>Diseñando Identidades de Marca Con Pasión Y Creatividad</h1>
-                <a href="/trabajemosjuntos" class="btn">Trabajemos Juntos</a>
+                <a href="./trabajemosjuntos" class="btn">Trabajemos Juntos</a>
             </div>
         </section>
 
@@ -38,11 +38,11 @@
 
         <section class="sobre-mi">
             <div class="container">
-                <img src="/images/foto.jpg" alt="Adolfo Dominguez">
+                <img src="./multimedia/imagen.jpg" alt="Adolfo Dominguez">
                 <div>
                     <h2>SOY ADODMZ, UN GUSTO CONOCERTE</h2>
                     <p>Hola, mi nombre es <strong>Adolfo Domínguez</strong> y soy diseñador gráfico, diseñador de logotipos y diseñador web de Ciudad Juárez, México.</p>
-                    <a href="/trabajemosjuntos" class="btn">Trabajemos Juntos</a>
+                    <a href="./trabajemosjuntos" class="btn">Trabajemos Juntos</a>
                 </div>
             </div>
         </section>
@@ -55,7 +55,7 @@
             .then(() => console.log("Service Worker registrado"))
             .catch(err => console.log("Error al registrar el Service Worker", err));
         }
-        
+
         window.onload = function() {
             setTimeout(function() {
                 document.getElementById("splash-screen").style.display = "none";
